@@ -1,6 +1,6 @@
 # Nabto Edge Hello World For iOS
 
-Invokes a CoAP service that says `Hello, world!`.
+Invokes a [Nabto Edge CoAP](https://docs.nabto.com/developer/guides/get-started/coap/intro.html) service that says `Hello, world!`.
 
 ## Installation
 
