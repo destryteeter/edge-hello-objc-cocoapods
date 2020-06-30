@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,84 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nabto Edge iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opm-b4-Epm">
+                                <rect key="frame" x="20" y="71" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A80-RO-rC3">
+                                <rect key="frame" x="20" y="111" width="374" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pp-er-XGw">
+                                <rect key="frame" x="28" y="803" width="61" height="30"/>
+                                <state key="normal" title="Init"/>
+                                <connections>
+                                    <action selector="handleInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ll1-95-5dA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAZ-CT-yz6">
+                                <rect key="frame" x="176" y="803" width="61" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="handleConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTG-qq-6KR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V86-U6-u7N">
+                                <rect key="frame" x="333" y="803" width="61" height="30"/>
+                                <state key="normal" title="CoAP"/>
+                                <connections>
+                                    <action selector="handleCoap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0b-Ri-gFX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V86-U6-u7N" firstAttribute="top" secondItem="A80-RO-rC3" secondAttribute="bottom" constant="28" id="2Ya-Hn-q5M"/>
+                            <constraint firstItem="6pp-er-XGw" firstAttribute="top" secondItem="A80-RO-rC3" secondAttribute="bottom" constant="28" id="2s8-Lt-Z98"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A80-RO-rC3" secondAttribute="trailing" constant="20" id="7Xc-1q-EfP"/>
+                            <constraint firstItem="6pp-er-XGw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="AyL-FS-raI"/>
+                            <constraint firstItem="opm-b4-Epm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="CsN-xz-Dkf"/>
+                            <constraint firstItem="V86-U6-u7N" firstAttribute="leading" secondItem="TAZ-CT-yz6" secondAttribute="trailing" constant="96" id="DGy-kG-nVh"/>
+                            <constraint firstItem="opm-b4-Epm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HSh-kp-Brz"/>
+                            <constraint firstItem="V86-U6-u7N" firstAttribute="width" secondItem="6pp-er-XGw" secondAttribute="width" id="J9A-sh-mGd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAZ-CT-yz6" secondAttribute="bottom" constant="29" id="KJf-cJ-PNL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TAZ-CT-yz6" secondAttribute="bottom" constant="29" id="KbA-9P-I3o"/>
+                            <constraint firstItem="A80-RO-rC3" firstAttribute="top" secondItem="opm-b4-Epm" secondAttribute="bottom" constant="19" id="QTO-C7-awP"/>
+                            <constraint firstItem="TAZ-CT-yz6" firstAttribute="leading" secondItem="6pp-er-XGw" secondAttribute="trailing" constant="87" id="RnV-mX-OZK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V86-U6-u7N" secondAttribute="trailing" constant="20" id="S4E-73-47G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V86-U6-u7N" secondAttribute="bottom" constant="29" id="S6r-1E-Jw6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V86-U6-u7N" secondAttribute="bottom" constant="29" id="UCk-eT-U9g"/>
+                            <constraint firstItem="6pp-er-XGw" firstAttribute="top" secondItem="A80-RO-rC3" secondAttribute="bottom" constant="28" id="W04-H5-cv1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6pp-er-XGw" secondAttribute="bottom" constant="29" id="Xnn-Wf-T5w"/>
+                            <constraint firstItem="TAZ-CT-yz6" firstAttribute="top" secondItem="A80-RO-rC3" secondAttribute="bottom" constant="28" id="ah5-fO-C43"/>
+                            <constraint firstItem="opm-b4-Epm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="bjj-Jb-kuz"/>
+                            <constraint firstItem="A80-RO-rC3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dm3-cU-HRl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6pp-er-XGw" secondAttribute="bottom" constant="29" id="jZd-lY-97h"/>
+                            <constraint firstItem="TAZ-CT-yz6" firstAttribute="width" secondItem="6pp-er-XGw" secondAttribute="width" id="nbk-O7-nPN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="opm-b4-Epm" secondAttribute="trailing" constant="20" id="nqG-3M-FcG"/>
+                            <constraint firstItem="opm-b4-Epm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sop-3H-93l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="opm-b4-Epm" secondAttribute="trailing" constant="20" id="zRW-Qq-fsP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="A80-RO-rC3" id="U1b-Fj-Bjc"/>
+                        <outlet property="versionLabel" destination="opm-b4-Epm" id="v74-kC-PF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
