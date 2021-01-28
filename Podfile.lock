@@ -1,0 +1,24 @@
+PODS:
+  - NabtoEdgeClientApi (1.0.5)
+  - tinycbor (0.5.4-alpha1)
+  - TinyCborObjc (0.4.6):
+    - tinycbor (= 0.5.4-alpha1)
+
+DEPENDENCIES:
+  - NabtoEdgeClientApi
+  - TinyCborObjc
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - NabtoEdgeClientApi
+    - tinycbor
+    - TinyCborObjc
+
+SPEC CHECKSUMS:
+  NabtoEdgeClientApi: c1b9a801da511b311bbb087305920f93cda31dd6
+  tinycbor: d4d71dddda1f8392fbb4249f63faf8552f327590
+  TinyCborObjc: 5204540fb90ff0c40fb22d408fa51bab79d78a80
+
+PODFILE CHECKSUM: 1ae72048dff9d6d5ab31cd6ff7923658e137a507
+
+COCOAPODS: 1.10.0

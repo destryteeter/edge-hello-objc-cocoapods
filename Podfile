@@ -10,4 +10,5 @@ platform :ios, '11.0'
 
 target 'EdgeHelloObjcCocoaPods' do
   pod 'NabtoEdgeClientApi'
+  pod 'TinyCborObjc'
 end
