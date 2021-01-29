@@ -295,9 +295,11 @@ typedef NS_OPTIONS(NSInteger, ConnectionState) {
                 }];
             } else {
                 const char* err = nabto_client_error_get_message(ec);
-                [self append:[NSString stringWithFormat:@"Password Authentication failed with error %d: %s", ec, err]];
+                [self append:[NSString stringWithFormat:@"Pairing failed with error %d: %s", ec, err]];
             }
+            nabto_client_coap_free(request);
             nabto_client_future_free(future);
+            callback(ec == NABTO_CLIENT_EC_OK);
         });
     });
 }
@@ -392,7 +394,7 @@ typedef NS_OPTIONS(NSInteger, ConnectionState) {
     
     void* payload;
     size_t len;
-    ec = nabto_client_coap_get_response_payload(request, &payload, &len);
+    ec = nabto_client_coap_get_response_payload((struct NabtoClientCoap_ *)request, &payload, &len);
     if (ec == NABTO_CLIENT_EC_OK) {
         uint16_t contentType;
         ec = nabto_client_coap_get_response_content_format((struct NabtoClientCoap_ *)request, &contentType);
